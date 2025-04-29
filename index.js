@@ -1,11 +1,11 @@
-{
-  "name": "api-gateway",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2"
-  }
-}
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  res.send('API Gateway is running!');
+});
+
+app.listen(PORT, () => {
+  console.log(`API Gateway listening on port ${PORT}`);
+});
